@@ -1,9 +1,11 @@
 package com.clover.fda.hellfire03;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+
+import com.clover.fda.hellfire03.menu.ScMenuActivity;
 
 
 public class MiqActivity extends ActionBarActivity {
@@ -14,4 +16,8 @@ public class MiqActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_miq);
 	}
 
+    public void doScMenu(View view) {
+        Intent intend = new Intent(this, ScMenuActivity.class);
+        startActivity(intend);
+    }
 }
