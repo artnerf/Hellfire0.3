@@ -1,7 +1,16 @@
 package com.clover.fda.hellfire03.menu;
 
+import android.content.Context;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 /**
  * Created by firstdata on 04.03.15.
@@ -12,27 +21,66 @@ public class ScMenu {
     static private int itemNbr = 0;
     static private int itemNbrs = 0;
     private DoMenu doMenu;
+    String fileName = "myMenuObject.dat";
 
     public ScMenu(){
         doMenu = new DoMenu();
     }
 
-    public void setDefaultMenu(){
-        currentMenuDir = doMenu.createDefaultMenu();
-        itemNbr = 0;
-        itemNbrs = currentMenuDir.items.size();
+    public void setDefaultMenu(Context context){
 
-        doDefault();
+
+        try{
+            FileInputStream fis = context.openFileInput(fileName);
+            ObjectInputStream is = new ObjectInputStream(fis);
+            try{
+                try{
+                    currentMenuDir = (DoMenu.MenuDir) is.readObject();
+                    is.close();
+                    fis.close();
+                }catch(ClassNotFoundException cnfe) {
+                    cnfe.printStackTrace();
+                }
+            } catch (ClassCastException cce){
+                cce.printStackTrace();
+            }
+
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+
+        if(currentMenuDir == null){
+            currentMenuDir = doMenu.createDefaultMenu();
+            itemNbr = 0;
+            itemNbrs = currentMenuDir.items.size();
+
+            doDefault(context);
+        }
     }
 
 
-    public void doDefault(){
-        JSONObject jsonObject = new JSONObject();
-        try {
-            JSONObject myJson = jsonObject.put("myScMenu", currentMenuDir);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+    public void doDefault(Context context){
+//        JSONObject jsonObject = new JSONObject();
+
+//        try {
+//            JSONObject myJson = jsonObject.put("myScMenu", currentMenuDir);
+            try{
+                FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE);
+                try{
+                    ObjectOutputStream os = new ObjectOutputStream(fos);
+                    os.writeObject(currentMenuDir);
+                    os.close();
+                    fos.close();
+                }
+                catch (IOException ioe){
+                    ioe.printStackTrace();
+                }
+            } catch (FileNotFoundException ex){
+                ex.printStackTrace();
+            }
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public String getTitle(){

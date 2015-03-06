@@ -19,9 +19,17 @@
         android:layout_centerVertical="true"/>
 
     <Button
+        android:id="@+id/MenuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Menu Test"
         android:onClick="doScMenu"/>
+    <Button
+        android:id="@+id/ParameterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parameter Test"
+        android:onClick="doParameter"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

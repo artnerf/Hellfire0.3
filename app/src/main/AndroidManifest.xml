@@ -20,6 +20,10 @@
             android:name=".menu.ScMenuActivity"
             android:label="@string/title_activity_sc_menu" >
         </activity>
+        <activity
+            android:name=".parameter.ParameterActivity"
+            android:label="@string/title_activity_parameter" >
+        </activity>
     </application>
 
 </manifest>

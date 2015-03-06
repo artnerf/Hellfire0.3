@@ -1,20 +1,22 @@
 package com.clover.fda.hellfire03.menu;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by firstdata on 04.03.15.
  */
-public class DoMenu {
+public class DoMenu implements Serializable {
+
     String defaultMenu = "{\"menu_directory\":true,\"message_text_id\":\"0039\"}";
 
-    public class MenuItem {
+    public class MenuItem implements Serializable{
         protected String name;
         protected long itemId;
         protected MenuDir nextMenuDir;
 
     }
-    public class MenuDir {
+    public class MenuDir implements Serializable {
         protected String title;
         protected ArrayList<MenuItem> items;
         protected MenuDir previousMenuDir;

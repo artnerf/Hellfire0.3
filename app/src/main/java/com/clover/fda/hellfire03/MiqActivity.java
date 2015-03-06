@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.clover.fda.hellfire03.menu.ScMenuActivity;
+import com.clover.fda.hellfire03.parameter.ParameterActivity;
 
 
 public class MiqActivity extends ActionBarActivity {
@@ -19,5 +20,11 @@ public class MiqActivity extends ActionBarActivity {
     public void doScMenu(View view) {
         Intent intend = new Intent(this, ScMenuActivity.class);
         startActivity(intend);
+    }
+
+    public void doParameter(View view){
+        Intent intend = new Intent(this, ParameterActivity.class);
+        startActivity(intend);
+
     }
 }

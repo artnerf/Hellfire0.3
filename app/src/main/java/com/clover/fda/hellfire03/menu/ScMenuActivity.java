@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Context;
+
 
 import com.clover.fda.hellfire03.R;
 
@@ -47,8 +49,8 @@ public class ScMenuActivity extends ActionBarActivity {
         buttonBack = (Button)findViewById(R.id.buttonBack);
 
         scMenu = new ScMenu();
-        scMenu.setDefaultMenu();
-
+        Context context = getApplicationContext();
+        scMenu.setDefaultMenu(context);
         bindButtons();
     }
 

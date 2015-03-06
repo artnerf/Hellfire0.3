@@ -6,5 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_sc_menu">ScMenuActivity</string>
     <string name="menu_title">Titel</string>
+    <string name="title_activity_parameter">ParameterActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
