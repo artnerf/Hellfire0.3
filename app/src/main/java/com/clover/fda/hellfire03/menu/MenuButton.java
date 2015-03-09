@@ -8,15 +8,15 @@ import android.widget.Button;
 public class MenuButton {
 
     private Button mButton;
-    private DoMenu.MenuItem menuItem;
+    private MenuElement menuItem;
 
-    public MenuButton(Button button, DoMenu.MenuItem item){
+    public MenuButton(Button button, MenuElement item){
 
         mButton = button;
         menuItem = item;
         if(mButton != null){
             if(menuItem != null){
-                mButton.setText(menuItem.name);
+                mButton.setText(menuItem.msg_text);
                 mButton.setVisibility(View.VISIBLE);
             }
             else {
@@ -25,11 +25,11 @@ public class MenuButton {
         }
     }
 
-    public DoMenu.MenuItem getMenuItem(){
+    public MenuElement getMenuItem(){
         return menuItem;
     }
 
-    public DoMenu.MenuDir getSubMenu(){
-        return menuItem.nextMenuDir;
-    }
+//    public MenuElement getSubMenu(){
+//        return menuItem;
+//    }
 }

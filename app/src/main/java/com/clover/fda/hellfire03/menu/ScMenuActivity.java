@@ -72,38 +72,38 @@ public class ScMenuActivity extends ActionBarActivity {
 
     public void menuButtonClick(View view){
         long longMenuItemId = 0;
-        DoMenu.MenuDir subMenu = null;
+        MenuElement subMenu = null;
         int id = view.getId();
 
         switch (id){
             case R.id.button1:
-                longMenuItemId = menuButton1.getMenuItem().itemId;
-                subMenu = menuButton1.getSubMenu();
+                longMenuItemId = menuButton1.getMenuItem().menu_item_id;
+                subMenu = menuButton1.getMenuItem();
                 break;
             case R.id.button2:
-                longMenuItemId = menuButton2.getMenuItem().itemId;
-                subMenu = menuButton2.getSubMenu();
+                longMenuItemId = menuButton2.getMenuItem().menu_item_id;
+                subMenu = menuButton2.getMenuItem();
                 break;
             case R.id.button3:
-                longMenuItemId = menuButton3.getMenuItem().itemId;
-                subMenu = menuButton3.getSubMenu();
+                longMenuItemId = menuButton3.getMenuItem().menu_item_id;
+                subMenu = menuButton3.getMenuItem();
                 break;
             case R.id.button4:
-                longMenuItemId = menuButton4.getMenuItem().itemId;
-                subMenu = menuButton4.getSubMenu();
+                longMenuItemId = menuButton4.getMenuItem().menu_item_id;
+                subMenu = menuButton4.getMenuItem();
                 break;
             case R.id.button5:
-                longMenuItemId = menuButton5.getMenuItem().itemId;
-                subMenu = menuButton5.getSubMenu();
+                longMenuItemId = menuButton5.getMenuItem().menu_item_id;
+                subMenu = menuButton5.getMenuItem();
                 break;
             case R.id.button6:
-                longMenuItemId = menuButton6.getMenuItem().itemId;
-                subMenu = menuButton6.getSubMenu();
+                longMenuItemId = menuButton6.getMenuItem().menu_item_id;
+                subMenu = menuButton6.getMenuItem();
                 break;
             default:
         }
 
-        if(subMenu != null){
+        if(subMenu != null && longMenuItemId == -1){
             scMenu.setSubMenu(subMenu);
             bindButtons();
             Toast toast = Toast.makeText(this, "Sub Menu", Toast.LENGTH_SHORT);

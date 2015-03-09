@@ -30,6 +30,6 @@
         android:layout_height="wrap_content"
         android:text="Parameter Test"
         android:onClick="doParameter"
-        android:layout_alignParentRight="true"/>
+        android:layout_toRightOf="@id/MenuButton"/>
 
 </RelativeLayout>
