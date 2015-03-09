@@ -72,7 +72,7 @@ public class ScMenu {
         byte[] baMenu = Utils.hexStringToBytes(strMenu);
         TLV tlv = new TLV();
         MenuElement menu = new MenuElement(true);
-        int iRet = tlv.GetTLVMenu(baMenu, menu);
+        int iRet = tlv.getTLVMenu(baMenu, menu);
         Log.d("MENU", "GetTLVMenu=" + iRet);
         // test, if the root menu is not the "Hauptmenu", but the Hauptmenu is the first MenuElement of the ArrayList
         // the root menu has only a submenu with one MenuElement what is the Hauptmenu. Clear?
