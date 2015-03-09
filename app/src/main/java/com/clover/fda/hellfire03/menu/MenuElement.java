@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Created by firstdata on 06.03.15.
+ * NEW
  */
 public class MenuElement {
     protected long msg_text_id;
