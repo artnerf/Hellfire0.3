@@ -4,5 +4,8 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
+    <style name="ButtonText">
+        <item name="android:textSize">40sp</item>
+    </style>
 
 </resources>

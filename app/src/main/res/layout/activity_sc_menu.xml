@@ -17,83 +17,131 @@
             android:text="@string/menu_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
-
 
     <!--<TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"-->
     <!--android:orientation="vertical"-->
     <!--android:layout_height="match_parent"-->
     <!--android:layout_width="match_parent"-->
     <!--android:stretchColumns="0,1,2">-->
-    <TableLayout
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <TableLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <!--android:stretchColumns="0,1,2"-->
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/buttonNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="nextButtonClick"/>
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/buttonPrev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Previous"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="peviousButtonClick"/>
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nix"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="menuButtonClick"/>
+                <Button
+                    android:id="@+id/buttonBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textAppearance="@style/ButtonText"
+                    android:onClick="backButtonClick"/>
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:stretchColumns="0,1,2">
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/menuFooter"
+            android:text="&lt; -swipe- &gt;"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:layout_gravity="center_horizontal|bottom" />
+    </LinearLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="nix"
-                android:onClick="menuButtonClick"/>
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="nix"
-                android:onClick="menuButtonClick"/>
-            <Button
-                android:id="@+id/buttonNext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Next"
-                android:onClick="nextButtonClick"/>
-        </TableRow>
-        <TableRow>
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="nix"
-                android:onClick="menuButtonClick"/>
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="nix"
-                android:onClick="menuButtonClick"/>
-            <Button
-                android:id="@+id/buttonPrev"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Previous"
-                android:onClick="peviousButtonClick"/>
-        </TableRow>
-        <TableRow>
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="nix"
-                android:onClick="menuButtonClick"/>
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="nix"
-                android:onClick="menuButtonClick"/>
-            <Button
-                android:id="@+id/buttonBack"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Back"
-                android:onClick="backButtonClick"/>
-        </TableRow>
-    </TableLayout>
 </LinearLayout>

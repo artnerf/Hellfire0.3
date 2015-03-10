@@ -21,6 +21,9 @@ public class ScMenuActivity extends ActionBarActivity {
     private Button button4;
     private Button button5;
     private Button button6;
+    private Button button7;
+    private Button button8;
+    private Button button9;
     private Button buttonNext;
     private Button buttonPrev;
     private Button buttonBack;
@@ -30,6 +33,9 @@ public class ScMenuActivity extends ActionBarActivity {
     private MenuButton menuButton4;
     private MenuButton menuButton5;
     private MenuButton menuButton6;
+    private MenuButton menuButton7;
+    private MenuButton menuButton8;
+    private MenuButton menuButton9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +50,9 @@ public class ScMenuActivity extends ActionBarActivity {
         button4 = (Button)findViewById(R.id.button4);
         button5 = (Button)findViewById(R.id.button5);
         button6 = (Button)findViewById(R.id.button6);
+        button7 = (Button)findViewById(R.id.button7);
+        button8 = (Button)findViewById(R.id.button8);
+        button9 = (Button)findViewById(R.id.button9);
         buttonNext = (Button)findViewById(R.id.buttonNext);
         buttonPrev = (Button)findViewById(R.id.buttonPrev);
         buttonBack = (Button)findViewById(R.id.buttonBack);
@@ -67,6 +76,9 @@ public class ScMenuActivity extends ActionBarActivity {
             menuButton4 = new MenuButton(button4, scMenu.getNextMenuItem());
             menuButton5 = new MenuButton(button5, scMenu.getNextMenuItem());
             menuButton6 = new MenuButton(button6, scMenu.getNextMenuItem());
+            menuButton7 = new MenuButton(button7, scMenu.getNextMenuItem());
+            menuButton8 = new MenuButton(button8, scMenu.getNextMenuItem());
+            menuButton9 = new MenuButton(button9, scMenu.getNextMenuItem());
         }
     }
 
@@ -99,6 +111,18 @@ public class ScMenuActivity extends ActionBarActivity {
             case R.id.button6:
                 longMenuItemId = menuButton6.getMenuItem().menu_item_id;
                 subMenu = menuButton6.getMenuItem();
+                break;
+            case R.id.button7:
+                longMenuItemId = menuButton7.getMenuItem().menu_item_id;
+                subMenu = menuButton7.getMenuItem();
+                break;
+            case R.id.button8:
+                longMenuItemId = menuButton8.getMenuItem().menu_item_id;
+                subMenu = menuButton8.getMenuItem();
+                break;
+            case R.id.button9:
+                longMenuItemId = menuButton9.getMenuItem().menu_item_id;
+                subMenu = menuButton9.getMenuItem();
                 break;
             default:
         }

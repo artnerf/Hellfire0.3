@@ -32,6 +32,7 @@ public class MenuElement {
         public MenuElement(boolean bDir) {
             msg_text_id = -1;
             if (bDir) submenu = new ArrayList<MenuElement>();
+            else submenu = null;
             menu_item_id = -1;
             item_property = -1;
             pre_param_id = -1;
