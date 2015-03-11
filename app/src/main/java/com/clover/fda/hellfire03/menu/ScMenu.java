@@ -170,6 +170,17 @@ public class ScMenu {
 
         return menuItem;
     }
+    public MenuElement getNextUnhiddenMenuItem() {
+        MenuElement menuItem;
+        do {
+            menuItem = null;
+            if (itemNbr < itemNbrs) {
+                menuItem = currentMenuDir.submenu.get(itemNbr);
+                itemNbr++;
+            }
+        } while (menuItem != null && menuItem.hidden == 1);
+        return menuItem;
+    }
 
     public void oneStepBack(){
         int modItemNbr = itemNbr%6;

@@ -2,6 +2,7 @@ package com.clover.fda.hellfire03.menu;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -70,15 +71,71 @@ public class ScMenuActivity extends ActionBarActivity {
         if(scMenu.isNextItem()){
 
             titleText.setText(scMenu.getTitle());
-            menuButton1 = new MenuButton(button1, scMenu.getNextMenuItem());
-            menuButton2 = new MenuButton(button2, scMenu.getNextMenuItem());
-            menuButton3 = new MenuButton(button3, scMenu.getNextMenuItem());
-            menuButton4 = new MenuButton(button4, scMenu.getNextMenuItem());
-            menuButton5 = new MenuButton(button5, scMenu.getNextMenuItem());
-            menuButton6 = new MenuButton(button6, scMenu.getNextMenuItem());
-            menuButton7 = new MenuButton(button7, scMenu.getNextMenuItem());
-            menuButton8 = new MenuButton(button8, scMenu.getNextMenuItem());
-            menuButton9 = new MenuButton(button9, scMenu.getNextMenuItem());
+
+            menuButton1 = new MenuButton(button1, scMenu.getNextUnhiddenMenuItem());
+            menuButton2 = new MenuButton(button2, scMenu.getNextUnhiddenMenuItem());
+            menuButton3 = new MenuButton(button3, scMenu.getNextUnhiddenMenuItem());
+            menuButton4 = new MenuButton(button4, scMenu.getNextUnhiddenMenuItem());
+            menuButton5 = new MenuButton(button5, scMenu.getNextUnhiddenMenuItem());
+            menuButton6 = new MenuButton(button6, scMenu.getNextUnhiddenMenuItem());
+            menuButton7 = new MenuButton(button7, scMenu.getNextUnhiddenMenuItem());
+            menuButton8 = new MenuButton(button8, scMenu.getNextUnhiddenMenuItem());
+            menuButton9 = new MenuButton(button9, scMenu.getNextUnhiddenMenuItem());
+            /*
+            MenuElement element1;
+            do{
+                element1 = scMenu.getNextMenuItem();
+                if(element1.hidden != 1) menuButton1 = new MenuButton(button1, element1);
+            }while(element1.hidden == 1);
+
+            MenuElement element2;
+            do{
+                element2 = scMenu.getNextMenuItem();
+                if(element2.hidden != 1) menuButton2 = new MenuButton(button2, element2);
+            } while(element2.hidden == 1);
+
+            MenuElement element3;
+            do{
+                element3 = scMenu.getNextMenuItem();
+                if(element3.hidden != 1) menuButton3 = new MenuButton(button3, element3);
+            }while(element3.hidden == 1);
+
+            MenuElement element4;
+            do{
+                element4 = scMenu.getNextMenuItem();
+                if(element4.hidden != 1) menuButton4 = new MenuButton(button4, element4);
+            }while(element4.hidden == 1);
+
+            MenuElement element5;
+            do{
+                element5 = scMenu.getNextMenuItem();
+                if(element5.hidden != 1) menuButton5 = new MenuButton(button5, element5);
+            }while(element5.hidden == 1);
+
+            MenuElement element6;
+            do{
+                element6 = scMenu.getNextMenuItem();
+                if(element6.hidden != 1) menuButton6 = new MenuButton(button6, element6);
+            }while(element6.hidden == 1);
+
+            MenuElement element7;
+            do{
+                element7 = scMenu.getNextMenuItem();
+                if(element7.hidden != 1) menuButton7 = new MenuButton(button7, element7);
+            }while(element7.hidden == 1);
+
+            MenuElement element8;
+            do{
+                element8 = scMenu.getNextMenuItem();
+                if(element8.hidden != 1) menuButton8 = new MenuButton(button8, element8);
+            }while(element8.hidden == 1);
+
+            MenuElement element9;
+            do{
+                element9 = scMenu.getNextMenuItem();
+                if(element9.hidden != 1) menuButton9 = new MenuButton(button9, element9);
+            }while(element9.hidden ==1);
+            */
         }
     }
 
@@ -132,6 +189,7 @@ public class ScMenuActivity extends ActionBarActivity {
             bindButtons();
             Toast toast = Toast.makeText(this, "Sub Menu", Toast.LENGTH_SHORT);
             toast.show();
+
         }
         else{
             Toast toast = Toast.makeText(this, "MenuId = "+longMenuItemId, Toast.LENGTH_SHORT);
