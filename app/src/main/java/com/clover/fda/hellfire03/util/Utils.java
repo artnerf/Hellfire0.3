@@ -1,4 +1,4 @@
-package com.clover.fda.hellfire03.tlv;
+package com.clover.fda.hellfire03.util;
 
 import android.content.Context;
 import android.util.Log;
@@ -48,7 +48,7 @@ public class Utils {
 		return;
 	}
 
-	public static byte[] MakeCommando(byte[] baSend) {
+	public static byte[] makeCommando(byte[] baSend) {
 
         byte[] baRet = new byte[4 + baSend.length];
 
@@ -60,6 +60,19 @@ public class Utils {
         System.arraycopy(baSend, 0, baRet, 4, baSend.length);
         return baRet;
 	}
+
+    public static byte[] addHostMsgLen(byte[] baSend) {
+
+        int len = baSend.length +2;
+
+        byte[] baRet = new byte[len];
+
+        baRet[0] = (byte)(len / 256);
+        baRet[1] = (byte)(len % 256);
+
+        System.arraycopy(baSend, 0, baRet, 2, baSend.length);
+        return baRet;
+    }
 
 	public static int GetCommandoLen(byte[] baReceive) {
 
