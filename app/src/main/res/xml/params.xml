@@ -3,8 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-
-    <PreferenceCategory
+   <PreferenceCategory
         android:key="languageTitle"
         android:title="Language">
 
@@ -33,14 +32,16 @@
         <EditTextPreference
             android:key="delay_print"
             android:summary="Enter your password"
-            android:inputType="numberPassword"
-            android:maxLength="4"
+            android:inputType="number"
+            android:maxLength="1"
             android:title="Druckverzögerung" />
         <ListPreference
             android:entries="@array/printOutputOptions"
             android:entryValues="@array/printOutputValues"
             android:key="print_output"
+            android:defaultValue="1"
             android:title="Druckausgabe" />
+
 
 
     </PreferenceCategory>

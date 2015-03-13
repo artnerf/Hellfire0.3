@@ -81,8 +81,9 @@ public class ParameterDemoActivity extends Activity {
         editor.putString("ping_host", "www.orf.at"); // Hamburg server
 
         // printer
-        editor.putInt("delay_print", 0);
-        editor.putInt("elv_text", 0);
+        editor.putString("delay_print", "5");
+        editor.putString("elv_text", "0");
+        editor.putString("printer_width", "32");
 
         // PIN-Pad
         editor.putString ("pp_connection", "USB");
@@ -123,7 +124,6 @@ public class ParameterDemoActivity extends Activity {
         editor.putString ("currency", "0978");
         editor.putInt    ("currency_exp", 2);
         editor.putString ("ecr_version", "90000001");
-        editor.putInt    ("printer_width", 32);
         editor.putString ("trace_num", "000000");
         editor.putString ("receipt_num", "0000");
         editor.putString ("request_id", "0000");
@@ -167,6 +167,7 @@ public class ParameterDemoActivity extends Activity {
         builder.append("language: " + bkse_par.getString("language", "") + "\n");
         builder.append("server_ip: " + bkse_par.getString("server_ip", "") + "\n");
         builder.append("server_port: " + bkse_par.getInt("server_port", 0) + "\n");
+        builder.append("elv_text: " + bkse_par.getString("elv_text", "") + "\n");
 
         textView.setText(builder.toString());
     }

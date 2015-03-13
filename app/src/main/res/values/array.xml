@@ -36,8 +36,8 @@
     </string-array>
 
     <string-array name="printOutputValues">
-        <item>1 is selected</item>
-        <item>2 is selected</item>
+        <item>0</item>
+        <item>1</item>
     </string-array>
 
     <string-array name="paperOptions">
@@ -47,8 +47,8 @@
     </string-array>
 
     <string-array name="paperValues">
-        <item>1 is selected</item>
-        <item>2 is selected</item>
+        <item>0</item>
+        <item>1</item>
     </string-array>
 
     <string-array name="printerWidthOptions">
@@ -58,7 +58,7 @@
     </string-array>
 
     <string-array name="printerWidthValues">
-        <item>1 is selected</item>
-        <item>2 is selected</item>
+        <item>24</item>
+        <item>32</item>
     </string-array>
 </resources>
