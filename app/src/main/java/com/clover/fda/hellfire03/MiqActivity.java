@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.clover.fda.hellfire03.menu.ScMenuActivity;
-import com.clover.fda.hellfire03.parameter.ParameterActivity;
+import com.clover.fda.hellfire03.parameter.ParameterDemoActivity;
 
 
 public class MiqActivity extends ActionBarActivity {
@@ -23,7 +23,7 @@ public class MiqActivity extends ActionBarActivity {
     }
 
     public void doParameter(View view){
-        Intent intend = new Intent(this, ParameterActivity.class);
+        Intent intend = new Intent(this, ParameterDemoActivity.class);
         startActivity(intend);
 
     }

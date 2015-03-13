@@ -23,6 +23,10 @@
             android:label="@string/title_activity_sc_menu" >
         </activity>
         <activity
+            android:name=".parameter.ParameterDemoActivity"
+            android:label="@string/title_activity_parameter" >
+        </activity>
+        <activity
             android:name=".parameter.ParameterActivity"
             android:label="@string/title_activity_parameter" >
         </activity>

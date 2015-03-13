@@ -9,5 +9,5 @@
     <string name="title_activity_parameter">ParameterActivity</string>
     <string name="hello_world">Hello world!</string>
 
-    <string name="language_selection">Sprachwauswahl default</string>
+    <string name="language_selection">Sprachwauswahl</string>
 </resources>

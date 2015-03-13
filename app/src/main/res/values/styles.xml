@@ -8,4 +8,13 @@
         <item name="android:textSize">30sp</item>
     </style>
 
+    <style name="MyTheme" >
+        <item name="@android:textAppearance">@style/MyDefaultTextAppearance</item>
+    </style>
+
+    <style name="MyDefaultTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

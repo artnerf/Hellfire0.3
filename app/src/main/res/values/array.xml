@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languageOptions">
+        <item>Deutsch</item>
+        <item>English</item>
+        <item>Français</item>
+        <item>Español</item>
+        <item>Italiano</item>
+        <item>Македонски</item>
+    </string-array>
+
+    <string-array name="languageValues">
+        <item>de</item>
+        <item>en</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>it</item>
+        <item>mk</item>
+    </string-array>
+
+    <string-array name="listOptions">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+    </string-array>
+
+    <string-array name="listValues">
+        <item>1 is selected</item>
+        <item>2 is selected</item>
+        <item>3 is selected</item>
+    </string-array>
+
+    <string-array name="printOutputOptions">
+        <item>RS232</item>
+        <item>Drucker</item>
+    </string-array>
+
+    <string-array name="printOutputValues">
+        <item>1 is selected</item>
+        <item>2 is selected</item>
+    </string-array>
+
+    <string-array name="paperOptions">
+        <item>Standardpapier</item>
+        <item>Lastschriftpapier</item>
+
+    </string-array>
+
+    <string-array name="paperValues">
+        <item>1 is selected</item>
+        <item>2 is selected</item>
+    </string-array>
+
+    <string-array name="printerWidthOptions">
+        <item>24 Zeichen</item>
+        <item>32 Zeichen</item>
+
+    </string-array>
+
+    <string-array name="printerWidthValues">
+        <item>1 is selected</item>
+        <item>2 is selected</item>
+    </string-array>
+</resources>

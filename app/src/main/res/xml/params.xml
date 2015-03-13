@@ -1,0 +1,92 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <PreferenceCategory
+        android:key="languageTitle"
+        android:title="Language">
+
+        <ListPreference
+            android:entries="@array/languageOptions"
+            android:entryValues="@array/languageValues"
+            android:key="language"
+            android:title="Sprache ..." />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="printerTitle"
+        android:title="Drucker">
+
+        <ListPreference
+            android:entries="@array/paperOptions"
+            android:entryValues="@array/paperValues"
+            android:key="elv_text"
+            android:title="Papierauswahl" />
+        <ListPreference
+            android:entries="@array/printerWidthOptions"
+            android:entryValues="@array/printerWidthValues"
+            android:key="printer_width"
+            android:title="Druckerbreite" />
+        <EditTextPreference
+            android:key="delay_print"
+            android:summary="Enter your password"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:title="Druckverzögerung" />
+        <ListPreference
+            android:entries="@array/printOutputOptions"
+            android:entryValues="@array/printOutputValues"
+            android:key="print_output"
+            android:title="Druckausgabe" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="PreferenceCategory B">
+
+        <com.clover.fda.hellfire03.parameter.IPAddressPreference
+            android:key="edittext_preference"
+            android:title="IP address"
+            android:summary="summary_edittext_preference"
+            android:inputType="number|numberDecimal"
+            android:digits="0123456789."
+            android:maxLength="15"
+            android:dialogTitle="dialog_title_edittext_preference" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="Username and password information"
+        android:title="Login information" >
+        <EditTextPreference
+            android:key="username"
+            android:summary="Please enter your login username"
+            android:title="Username" />
+        <EditTextPreference
+            android:key="password"
+            android:summary="Enter your password"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:title="Password" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="Username and password information"
+        android:title="Settings" >
+        <CheckBoxPreference
+            android:key="checkBox"
+            android:summary="On/Off"
+            android:title="Keep me logged in" />
+
+        <ListPreference
+            android:entries="@array/listOptions"
+            android:entryValues="@array/listValues"
+            android:key="listpref"
+            android:summary="List preference example"
+            android:title="List preference" />
+    </PreferenceCategory>
+</PreferenceScreen>
