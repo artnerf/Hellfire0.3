@@ -26,7 +26,7 @@ public class ParameterDemoActivity extends Activity {
         Button btnPrefs = (Button) findViewById(R.id.btnPrefs);
         Button btnGetPrefs = (Button) findViewById(R.id.btnGetPreferences);
         Button btnDispNetwork = (Button) findViewById(R.id.btnDisplayNetworkSettings);
-        Button btnBkseIni = (Button) findViewById(R.id.btnCreateParameterFile);
+        Button btnBkse Ini = (Button) findViewById(R.id.btnCreateParameterFile);
 
         textView = (TextView) findViewById(R.id.txtPrefs);
 
