@@ -32,4 +32,12 @@
         android:onClick="doParameter"
         android:layout_toRightOf="@id/MenuButton"/>
 
+    <Button
+        android:id="@+id/InitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Initialize"
+        android:onClick="doInit"
+        android:layout_toRightOf="@id/ParameterButton"/>
+
 </RelativeLayout>

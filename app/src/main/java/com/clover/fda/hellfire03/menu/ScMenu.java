@@ -25,6 +25,7 @@ import java.util.ArrayList;
 
 public class ScMenu {
     // Menu Item IDs
+    public static final long STARTUP_MESSAGE      = 0x00040002;
     public static final long SERVICE_MENU_ITEM_ID = 0x0009000A;
 
     static private MenuElement currentMenuDir;

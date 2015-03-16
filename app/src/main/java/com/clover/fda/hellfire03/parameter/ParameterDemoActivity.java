@@ -65,8 +65,8 @@ public class ParameterDemoActivity extends Activity {
     }
 
     private void init_bkse_parameter() {
-        SharedPreferences bkse_par = PreferenceManager.getDefaultSharedPreferences(ParameterDemoActivity.this);
-        SharedPreferences.Editor editor = bkse_par.edit();
+        SharedPreferences bkse_ini = PreferenceManager.getDefaultSharedPreferences(ParameterDemoActivity.this);
+        SharedPreferences.Editor editor = bkse_ini.edit();
 
         editor.putString("terminal_id", "54047754");
         editor.putString("language", "de");

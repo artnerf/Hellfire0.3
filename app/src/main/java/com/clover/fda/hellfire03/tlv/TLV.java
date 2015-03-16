@@ -4,6 +4,10 @@ import android.util.Log;
 import com.clover.fda.hellfire03.menu.MenuElement;
 import com.clover.fda.hellfire03.util.Utils;
 
+/**
+ * TLC class handles all TLV stuff
+ */
+
 public class TLV {
 	private class Tag {
 	    int iTag;
@@ -27,6 +31,13 @@ public class TLV {
 	    }
 	}
 
+    /**
+     * Function fills the menu structure of MenuElements from a given TLV byte stream
+     *
+     * @param tagList
+     * @param menu
+     * @return
+     */
     public int getTLVMenu(byte[] tagList, MenuElement menu) {
         if (menu == null)
             return -1;

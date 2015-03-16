@@ -7,7 +7,8 @@
     <string name="title_activity_sc_menu">ScMenuActivity</string>
     <string name="menu_title">Titel</string>
     <string name="title_activity_parameter">ParameterActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="host_message">Host Message</string>
 
     <string name="language_selection">Sprachwauswahl default</string>
+    <string name="title_activity_host">HostActivity</string>
 </resources>

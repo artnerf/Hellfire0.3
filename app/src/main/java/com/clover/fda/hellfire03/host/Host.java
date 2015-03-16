@@ -1,6 +1,13 @@
 package com.clover.fda.hellfire03.host;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
+import com.clover.fda.hellfire03.parameter.Param;
+import com.clover.fda.hellfire03.tlv.TAG;
+import com.clover.fda.hellfire03.tlv.TLV;
 import com.clover.fda.hellfire03.util.Utils;
 
 import java.io.IOException;
@@ -20,6 +27,28 @@ public class Host {
 //    static protected StringBuffer receiveString = new StringBuffer();
 //    static protected StringBuffer sendString = new StringBuffer();
 
+    static public String buildEftRequest(Context context, long menuItemId){
+
+        byte[] newTlv;
+
+        SharedPreferences bkse_ini = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = bkse_ini.edit();
+
+        int requestId = bkse_ini.getInt(Param.PARAM_REQUEST_ID, 0);
+        requestId++;
+        editor.putInt(Param.PARAM_REQUEST_ID, requestId);
+
+        editor.commit();
+
+        TLV tlv = new TLV();
+
+        byte[] id =  Utils.Integer2ByteArray(requestId);
+        newTlv = tlv.createTag(TAG.REQUEST_ID, id);
+
+        String terminalId = bkse_ini.getString("terminal_id","");
+
+        return terminalId;
+    }
 
     static public void sendReceiveHost() throws IOException {
         InputStream is = null;

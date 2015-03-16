@@ -30,6 +30,10 @@
             android:name=".parameter.ParameterActivity"
             android:label="@string/title_activity_parameter" >
         </activity>
+        <activity
+            android:name=".host.HostActivity"
+            android:label="@string/title_activity_host" >
+        </activity>
     </application>
 
 </manifest>
