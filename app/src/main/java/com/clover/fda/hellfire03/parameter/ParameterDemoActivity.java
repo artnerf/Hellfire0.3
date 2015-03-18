@@ -98,82 +98,82 @@ public class ParameterDemoActivity extends Activity implements PasswordDialogFra
         SharedPreferences bkse_par = PreferenceManager.getDefaultSharedPreferences(ParameterDemoActivity.this);
         SharedPreferences.Editor editor = bkse_par.edit();
 
-        editor.putString (Param.PARAM_IND_TERMINAL_ID, "54047754");
-        editor.putString (Param.PARAM_IND_LANGUAGE, "de");
+        editor.putString (Param.TERMINAL_ID, "54047754");
+        editor.putString (Param.LANGUAGE, "de");
 
         // server
-        editor.putString (Param.PARAM_IND_IP_ENCRYPTION, "NONE"); // NONE, SSL, DATAWIRE
-        editor.putString (Param.PARAM_IND_SERVERIP, "217.86.142.9");  // Hamburg server
-        editor.putString(Param.PARAM_IND_SERVERPORT, "9013");
-        editor.putString (Param.PARAM_IND_SERVERIP_2, "217.86.142.9"); // Hamburg server
-        editor.putString(Param.PARAM_IND_SERVERPORT_2, "9013");
-        editor.putString (Param.PARAM_IND_PING_HOST, "www.orf.at");
+        editor.putString (Param.IP_ENCRYPTION, "NONE"); // NONE, SSL, DATAWIRE
+        editor.putString (Param.SERVERIP, "217.86.142.9");  // Hamburg server
+        editor.putString(Param.SERVERPORT, "9013");
+        editor.putString (Param.SERVERIP_2, "217.86.142.9"); // Hamburg server
+        editor.putString(Param.SERVERPORT_2, "9013");
+        editor.putString (Param.PING_HOST, "www.orf.at");
 
         // printer
-        editor.putString(Param.PARAM_IND_DELAY_PRINT, "5");
-        editor.putString(Param.PARAM_IND_ELV_TEXT_NEEDED, "0");
-        editor.putString(Param.PARAM_IND_PRINTER_WIDTH, "32");
+        editor.putString(Param.DELAY_PRINT, "5");
+        editor.putString(Param.ELV_TEXT_NEEDED, "0");
+        editor.putString(Param.PRINTER_WIDTH, "32");
 
         // PIN-Pad
-        editor.putString (Param.PARAM_IND_PINPAD_CONNECTION, "USB");
-        editor.putString (Param.PARAM_IND_PINPADIP, "192.168.1.3");
-        editor.putString (Param.PARAM_IND_PINPAD_TYPE, "APASPP"); // INTERN, APASPP
-        editor.putString (Param.PARAM_IND_PINPAD_CARDREADER, "SEPERATE"); // SEPERATE, HYBRID
-        editor.putString (Param.PARAM_IND_PINPAD_PORT, "9050");
+        editor.putString (Param.PINPAD_CONNECTION, "USB");
+        editor.putString (Param.PINPADIP, "192.168.1.3");
+        editor.putString (Param.PINPAD_TYPE, "APASPP"); // INTERN, APASPP
+        editor.putString (Param.PINPAD_CARDREADER, "SEPERATE"); // SEPERATE, HYBRID
+        editor.putString (Param.PINPAD_PORT, "9050");
 
         // Proxy
-        editor.putString (Param.PARAM_IND_PROXY_SERVER, "0");
-        editor.putString(Param.PARAM_IND_PROXY_ADDR, "");
-        editor.putString(Param.PARAM_IND_PROXY_PORT, "8080");
-        editor.putString(Param.PARAM_IND_PROXY_USER, "");
-        editor.putString (Param.PARAM_IND_PROXY_PWD, "");
+        editor.putString (Param.PROXY_SERVER, "0");
+        editor.putString(Param.PROXY_ADDR, "");
+        editor.putString(Param.PROXY_PORT, "8080");
+        editor.putString(Param.PROXY_USER, "");
+        editor.putString (Param.PROXY_PWD, "");
 
         // ECR
-        editor.putString (Param.PARAM_IND_ECR_CONNECTION, "0");
-        editor.putString (Param.PARAM_IND_ECR_PROTOCOL, "RIA");
-        editor.putString(Param.PARAM_IND_ECR_PORT, "9010");
-        editor.putString(Param.PARAM_IND_ECR_LEN_INFO, "4");
-        editor.putString(Param.PARAM_IND_ECR_ENC, "0");
-        editor.putString (Param.PARAM_IND_ECR_RECEIPT, "1");
+        editor.putString (Param.ECR_CONNECTION, "0");
+        editor.putString (Param.ECR_PROTOCOL, "RIA");
+        editor.putString(Param.ECR_PORT, "9010");
+        editor.putString(Param.ECR_LEN_INFO, "4");
+        editor.putString(Param.ECR_ENC, "0");
+        editor.putString (Param.ECR_RECEIPT, "1");
 
 
         // Pay@table
-        editor.putString (Param.PARAM_IND_PAY_AT_TABLE_IP, "");
-        editor.putString(Param.PARAM_IND_PAY_AT_TABLE_PORT, "1234");
+        editor.putString (Param.PAY_AT_TABLE_IP, "");
+        editor.putString(Param.PAY_AT_TABLE_PORT, "1234");
 
 
         // tracer
-        editor.putString (Param.PARAM_IND_TRACERIP, "192.168.1.20");
-        editor.putString(Param.PARAM_IND_TRACE_LEVEL, "1");
+        editor.putString (Param.TRACERIP, "192.168.1.20");
+        editor.putString(Param.TRACE_LEVEL, "1");
 
         // bkse.dat
-        editor.putString (Param.PARAM_IND_COMPANYNO, "00000000");
-        editor.putString (Param.PARAM_IND_STORENO, "00000000");
-        editor.putString (Param.PARAM_IND_POSNO, "00000000");
-        editor.putString (Param.PARAM_IND_CURRENCY, "0978");
-        editor.putString(Param.PARAM_IND_CURRENCY_EXP, "2");
-        editor.putString (Param.PARAM_IND_ECR_VERSION, "90000001");
-        editor.putString (Param.PARAM_IND_TRACE_NUM, "000000");
-        editor.putString (Param.PARAM_IND_RECEIPT_NUM, "0000");
-        editor.putString (Param.PARAM_IND_REQUEST_ID, "0000");
-        editor.putString(Param.PARAM_IND_OFFLINE_SYNC, "0");
-        editor.putString(Param.PARAM_IND_TA_DATE, "00000000");
-        editor.putString (Param.PARAM_IND_TA_TIME, "000000");
-        editor.putString (Param.PARAM_IND_T_SNR, "00000000");
-        editor.putString (Param.PARAM_IND_PP_VENDOR, "FD100");
-        editor.putString (Param.PARAM_IND_TIMER_VERSION, "00000000");
-        editor.putString (Param.PARAM_IND_CAPABILITIES, "00E00000");
-        editor.putString (Param.PARAM_IND_MERCHANT_PWD, DefaultPassword.MERCHANT);
-        editor.putString (Param.PARAM_IND_CASHIER_PWD,  DefaultPassword.CASHIER);
-        editor.putString (Param.PARAM_IND_SERVICE_PWD,  DefaultPassword.SERVICE);
-        editor.putString (Param.PARAM_IND_LOCAL_VERSION, "00000000");
-        editor.putString (Param.PARAM_IND_LAST_ERROR, "00000000");
-        editor.putString (Param.PARAM_IND_LAST_ERROR_TAG, "00000000");
-        editor.putString (Param.PARAM_IND_LAST_ERROR_TEXT, "");
-        editor.putString(Param.PARAM_IND_SIGNATURE_LEN, "192");
-        editor.putString(Param.PARAM_IND_RC_BEEP, "0");
-        editor.putString(Param.PARAM_IND_PARAM_CHANGED, "1");
-        editor.putString (Param.PARAM_IND_SPLIT_SIZE, "0");
+        editor.putString (Param.COMPANYNO, "00000000");
+        editor.putString (Param.STORENO, "00000000");
+        editor.putString (Param.POSNO, "00000000");
+        editor.putString (Param.CURRENCY, "0978");
+        editor.putString(Param.CURRENCY_EXP, "2");
+        editor.putString (Param.ECR_VERSION, "90000001");
+        editor.putString (Param.TRACE_NUM, "000000");
+        editor.putString (Param.RECEIPT_NUM, "0000");
+        editor.putString (Param.REQUEST_ID, "0000");
+        editor.putString(Param.OFFLINE_SYNC, "0");
+        editor.putString(Param.TA_DATE, "00000000");
+        editor.putString (Param.TA_TIME, "000000");
+        editor.putString (Param.T_SNR, "00000000");
+        editor.putString (Param.PP_VENDOR, "FD100");
+        editor.putString (Param.TIMER_VERSION, "00000000");
+        editor.putString (Param.CAPABILITIES, "00E00000");
+        editor.putString (Param.MERCHANT_PWD, DefaultPassword.MERCHANT);
+        editor.putString (Param.CASHIER_PWD,  DefaultPassword.CASHIER);
+        editor.putString (Param.SERVICE_PWD,  DefaultPassword.SERVICE);
+        editor.putString (Param.LOCAL_VERSION, "00000000");
+        editor.putString (Param.LAST_ERROR, "00000000");
+        editor.putString (Param.LAST_ERROR_TAG, "00000000");
+        editor.putString (Param.LAST_ERROR_TEXT, "");
+        editor.putString(Param.SIGNATURE_LEN, "192");
+        editor.putString(Param.RC_BEEP, "0");
+        editor.putString(Param.PARAM_CHANGED, "1");
+        editor.putString (Param.SPLIT_SIZE, "0");
 
         // Commit the edits!
         editor.commit();
@@ -191,67 +191,67 @@ public class ParameterDemoActivity extends Activity implements PasswordDialogFra
 
         StringBuilder builder = new StringBuilder();
 
-        builder.append (Param.PARAM_IND_TERMINAL_ID + ": " + bkse_par.getString(Param.PARAM_IND_TERMINAL_ID, "") + "\n");
-        builder.append (Param.PARAM_IND_LANGUAGE + ": " + bkse_par.getString(Param.PARAM_IND_LANGUAGE, "") + "\n");
-        builder.append (Param.PARAM_IND_IP_ENCRYPTION + ": " + bkse_par.getString(Param.PARAM_IND_IP_ENCRYPTION, "") + "\n");
-        builder.append (Param.PARAM_IND_SERVERIP + ": " + bkse_par.getString(Param.PARAM_IND_SERVERIP, "") + "\n");
-        builder.append (Param.PARAM_IND_SERVERPORT + ": " + bkse_par.getString(Param.PARAM_IND_SERVERPORT, "") + "\n");
-        builder.append (Param.PARAM_IND_SERVERIP_2 + ": " + bkse_par.getString(Param.PARAM_IND_SERVERIP_2, "") + "\n");
-        builder.append (Param.PARAM_IND_SERVERPORT_2 + ": " + bkse_par.getString(Param.PARAM_IND_SERVERPORT_2, "") + "\n");
-        builder.append (Param.PARAM_IND_PING_HOST + ": " + bkse_par.getString(Param.PARAM_IND_PING_HOST, "") + "\n");
-        builder.append (Param.PARAM_IND_DELAY_PRINT + ": " + bkse_par.getString(Param.PARAM_IND_DELAY_PRINT, "") + "\n");
-        builder.append (Param.PARAM_IND_ELV_TEXT_NEEDED + ": " + bkse_par.getString(Param.PARAM_IND_ELV_TEXT_NEEDED, "") + "\n");
-        builder.append (Param.PARAM_IND_PRINTER_WIDTH + ": " + bkse_par.getString(Param.PARAM_IND_PRINTER_WIDTH, "") + "\n");
-        builder.append (Param.PARAM_IND_PINPAD_CONNECTION + ": " + bkse_par.getString(Param.PARAM_IND_PINPAD_CONNECTION, "") + "\n");
-        builder.append (Param.PARAM_IND_PINPADIP + ": " + bkse_par.getString(Param.PARAM_IND_PINPADIP, "") + "\n");
-        builder.append (Param.PARAM_IND_PINPAD_TYPE + ": " + bkse_par.getString(Param.PARAM_IND_PINPAD_TYPE, "") + "\n");
-        builder.append (Param.PARAM_IND_PINPAD_CARDREADER + ": " + bkse_par.getString(Param.PARAM_IND_TERMINAL_ID, "") + "\n");
-        builder.append (Param.PARAM_IND_PINPAD_PORT + ": " + bkse_par.getString(Param.PARAM_IND_PINPAD_CARDREADER, "") + "\n");
-        builder.append (Param.PARAM_IND_PROXY_SERVER + ": " + bkse_par.getString(Param.PARAM_IND_PROXY_SERVER, "") + "\n");
-        builder.append (Param.PARAM_IND_PROXY_ADDR + ": " + bkse_par.getString(Param.PARAM_IND_PROXY_ADDR, "") + "\n");
-        builder.append (Param.PARAM_IND_PROXY_PORT + ": " + bkse_par.getString(Param.PARAM_IND_PROXY_PORT, "") + "\n");
-        builder.append (Param.PARAM_IND_PROXY_USER + ": " + bkse_par.getString(Param.PARAM_IND_PROXY_USER, "") + "\n");
-        builder.append (Param.PARAM_IND_PROXY_PWD + ": " + bkse_par.getString(Param.PARAM_IND_PROXY_PWD, "") + "\n");
-        builder.append (Param.PARAM_IND_ECR_CONNECTION + ": " + bkse_par.getString(Param.PARAM_IND_ECR_CONNECTION, "") + "\n");
-        builder.append (Param.PARAM_IND_ECR_PROTOCOL + ": " + bkse_par.getString(Param.PARAM_IND_ECR_PROTOCOL, "") + "\n");
-        builder.append (Param.PARAM_IND_ECR_PORT + ": " + bkse_par.getString(Param.PARAM_IND_ECR_PORT, "") + "\n");
-        builder.append (Param.PARAM_IND_ECR_LEN_INFO + ": " + bkse_par.getString(Param.PARAM_IND_ECR_LEN_INFO, "") + "\n");
-        builder.append (Param.PARAM_IND_ECR_ENC + ": " + bkse_par.getString(Param.PARAM_IND_ECR_ENC, "") + "\n");
-        builder.append (Param.PARAM_IND_ECR_RECEIPT + ": " + bkse_par.getString(Param.PARAM_IND_ECR_RECEIPT, "") + "\n");
-        builder.append (Param.PARAM_IND_PAY_AT_TABLE_IP + ": " + bkse_par.getString(Param.PARAM_IND_PAY_AT_TABLE_IP, "") + "\n");
-        builder.append (Param.PARAM_IND_PAY_AT_TABLE_PORT + ": " + bkse_par.getString(Param.PARAM_IND_PAY_AT_TABLE_PORT, "") + "\n");
-        builder.append (Param.PARAM_IND_TRACERIP + ": " + bkse_par.getString(Param.PARAM_IND_TRACERIP, "") + "\n");
-        builder.append (Param.PARAM_IND_TRACE_LEVEL + ": " + bkse_par.getString(Param.PARAM_IND_TRACE_LEVEL, "") + "\n");
+        builder.append (Param.TERMINAL_ID + ": " + bkse_par.getString(Param.TERMINAL_ID, "") + "\n");
+        builder.append (Param.LANGUAGE + ": " + bkse_par.getString(Param.LANGUAGE, "") + "\n");
+        builder.append (Param.IP_ENCRYPTION + ": " + bkse_par.getString(Param.IP_ENCRYPTION, "") + "\n");
+        builder.append (Param.SERVERIP + ": " + bkse_par.getString(Param.SERVERIP, "") + "\n");
+        builder.append (Param.SERVERPORT + ": " + bkse_par.getString(Param.SERVERPORT, "") + "\n");
+        builder.append (Param.SERVERIP_2 + ": " + bkse_par.getString(Param.SERVERIP_2, "") + "\n");
+        builder.append (Param.SERVERPORT_2 + ": " + bkse_par.getString(Param.SERVERPORT_2, "") + "\n");
+        builder.append (Param.PING_HOST + ": " + bkse_par.getString(Param.PING_HOST, "") + "\n");
+        builder.append (Param.DELAY_PRINT + ": " + bkse_par.getString(Param.DELAY_PRINT, "") + "\n");
+        builder.append (Param.ELV_TEXT_NEEDED + ": " + bkse_par.getString(Param.ELV_TEXT_NEEDED, "") + "\n");
+        builder.append (Param.PRINTER_WIDTH + ": " + bkse_par.getString(Param.PRINTER_WIDTH, "") + "\n");
+        builder.append (Param.PINPAD_CONNECTION + ": " + bkse_par.getString(Param.PINPAD_CONNECTION, "") + "\n");
+        builder.append (Param.PINPADIP + ": " + bkse_par.getString(Param.PINPADIP, "") + "\n");
+        builder.append (Param.PINPAD_TYPE + ": " + bkse_par.getString(Param.PINPAD_TYPE, "") + "\n");
+        builder.append (Param.PINPAD_CARDREADER + ": " + bkse_par.getString(Param.TERMINAL_ID, "") + "\n");
+        builder.append (Param.PINPAD_PORT + ": " + bkse_par.getString(Param.PINPAD_CARDREADER, "") + "\n");
+        builder.append (Param.PROXY_SERVER + ": " + bkse_par.getString(Param.PROXY_SERVER, "") + "\n");
+        builder.append (Param.PROXY_ADDR + ": " + bkse_par.getString(Param.PROXY_ADDR, "") + "\n");
+        builder.append (Param.PROXY_PORT + ": " + bkse_par.getString(Param.PROXY_PORT, "") + "\n");
+        builder.append (Param.PROXY_USER + ": " + bkse_par.getString(Param.PROXY_USER, "") + "\n");
+        builder.append (Param.PROXY_PWD + ": " + bkse_par.getString(Param.PROXY_PWD, "") + "\n");
+        builder.append (Param.ECR_CONNECTION + ": " + bkse_par.getString(Param.ECR_CONNECTION, "") + "\n");
+        builder.append (Param.ECR_PROTOCOL + ": " + bkse_par.getString(Param.ECR_PROTOCOL, "") + "\n");
+        builder.append (Param.ECR_PORT + ": " + bkse_par.getString(Param.ECR_PORT, "") + "\n");
+        builder.append (Param.ECR_LEN_INFO + ": " + bkse_par.getString(Param.ECR_LEN_INFO, "") + "\n");
+        builder.append (Param.ECR_ENC + ": " + bkse_par.getString(Param.ECR_ENC, "") + "\n");
+        builder.append (Param.ECR_RECEIPT + ": " + bkse_par.getString(Param.ECR_RECEIPT, "") + "\n");
+        builder.append (Param.PAY_AT_TABLE_IP + ": " + bkse_par.getString(Param.PAY_AT_TABLE_IP, "") + "\n");
+        builder.append (Param.PAY_AT_TABLE_PORT + ": " + bkse_par.getString(Param.PAY_AT_TABLE_PORT, "") + "\n");
+        builder.append (Param.TRACERIP + ": " + bkse_par.getString(Param.TRACERIP, "") + "\n");
+        builder.append (Param.TRACE_LEVEL + ": " + bkse_par.getString(Param.TRACE_LEVEL, "") + "\n");
 
 
 //        // bkse.dat
-//        editor.putString (Param.PARAM_IND_COMPANYNO, "00000000");
-//        editor.putString (Param.PARAM_IND_STORENO, "00000000");
-//        editor.putString (Param.PARAM_IND_POSNO, "00000000");
-//        editor.putString (Param.PARAM_IND_CURRENCY, "0978");
-//        editor.putString (Param.PARAM_IND_CURRENCY_EXP, "2");
-//        editor.putString (Param.PARAM_IND_ECR_VERSION, "90000001");
-//        editor.putString (Param.PARAM_IND_TRACE_NUM, "000000");
-//        editor.putString (Param.PARAM_IND_RECEIPT_NUM, "0000");
-//        editor.putString (Param.PARAM_IND_REQUEST_ID, "0000");
-//        editor.putString (Param.PARAM_IND_OFFLINE_SYNC, "0");
-//        editor.putString (Param.PARAM_IND_TA_DATE, "00000000");
-//        editor.putString (Param.PARAM_IND_TA_TIME, "000000");
-//        editor.putString (Param.PARAM_IND_T_SNR, "00000000");
-//        editor.putString (Param.PARAM_IND_PP_VENDOR, "FD100");
-//        editor.putString (Param.PARAM_IND_TIMER_VERSION, "00000000");
-//        editor.putString (Param.PARAM_IND_CAPABILITIES, "00E00000");
-//        editor.putString (Param.PARAM_IND_MERCHANT_PWD, DefaultPassword.MERCHANT);
-//        editor.putString (Param.PARAM_IND_CASHIER_PWD,  DefaultPassword.CASHIER);
-//        editor.putString (Param.PARAM_IND_SERVICE_PWD,  DefaultPassword.SERVICE);
-//        editor.putString (Param.PARAM_IND_LOCAL_VERSION, "00000000");
-//        editor.putString (Param.PARAM_IND_LAST_ERROR, "00000000");
-//        editor.putString (Param.PARAM_IND_LAST_ERROR_TAG, "00000000");
-//        editor.putString (Param.PARAM_IND_LAST_ERROR_TEXT, "");
-//        editor.putString (Param.PARAM_IND_SIGNATURE_LEN, "192");
-//        editor.putString (Param.PARAM_IND_RC_BEEP, "0");
-//        editor.putString (Param.PARAM_IND_PARAM_CHANGED, "1");
-//        editor.putString (Param.PARAM_IND_SPLIT_SIZE, "0");
+//        editor.putString (Param.COMPANYNO, "00000000");
+//        editor.putString (Param.STORENO, "00000000");
+//        editor.putString (Param.POSNO, "00000000");
+//        editor.putString (Param.CURRENCY, "0978");
+//        editor.putString (Param.CURRENCY_EXP, "2");
+//        editor.putString (Param.ECR_VERSION, "90000001");
+//        editor.putString (Param.TRACE_NUM, "000000");
+//        editor.putString (Param.RECEIPT_NUM, "0000");
+//        editor.putString (Param.REQUEST_ID, "0000");
+//        editor.putString (Param.OFFLINE_SYNC, "0");
+//        editor.putString (Param.TA_DATE, "00000000");
+//        editor.putString (Param.TA_TIME, "000000");
+//        editor.putString (Param.T_SNR, "00000000");
+//        editor.putString (Param.PP_VENDOR, "FD100");
+//        editor.putString (Param.TIMER_VERSION, "00000000");
+//        editor.putString (Param.CAPABILITIES, "00E00000");
+//        editor.putString (Param.MERCHANT_PWD, DefaultPassword.MERCHANT);
+//        editor.putString (Param.CASHIER_PWD,  DefaultPassword.CASHIER);
+//        editor.putString (Param.SERVICE_PWD,  DefaultPassword.SERVICE);
+//        editor.putString (Param.LOCAL_VERSION, "00000000");
+//        editor.putString (Param.LAST_ERROR, "00000000");
+//        editor.putString (Param.LAST_ERROR_TAG, "00000000");
+//        editor.putString (Param.LAST_ERROR_TEXT, "");
+//        editor.putString (Param.SIGNATURE_LEN, "192");
+//        editor.putString (Param.RC_BEEP, "0");
+//        editor.putString (Param.PARAM_CHANGED, "1");
+//        editor.putString (Param.SPLIT_SIZE, "0");
 //
         textView.setText(builder.toString());
     }
