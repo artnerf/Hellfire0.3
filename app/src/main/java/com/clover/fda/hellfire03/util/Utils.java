@@ -34,6 +34,17 @@ public class Utils {
         return bytesToHex(baRet);
 	}
 
+    public static byte[] stringToBytes(String s){
+        int len = s.length();
+        byte[] data = new byte[len];
+        for (int i = 0; i < len; i ++) {
+            data[i] = (byte)s.charAt(i);
+            //data[i] = (byte) ((Character.digit(s.charAt(i), 16) << 4) + Character.digit(s.charAt(i + 1), 16));
+        }
+        return data;
+
+    }
+
     public static byte[] hexStringToBytes(String s) {
         int len = s.length();
         byte[] data = new byte[len / 2];
@@ -109,6 +120,7 @@ public class Utils {
 	    }
 	    return sb.toString();
 	}
+
     public static byte[] HEX2Byte(String hexString) {
     	try {
 	    	if (!IsValidHEX(hexString))
@@ -320,8 +332,60 @@ public class Utils {
 		return sb.toString();
 	}
 
+    /**
+     * longToByteArray delivers in any case 4 Bytes for a long
+     * @param lDec value to convert
+     * @return bytes array
+     */
+    public static byte[] longToByteArray4(long lDec){
+        byte[] myBytes = new byte[4];
 
-    public static byte[] Integer2ByteArray (int iDec) {
+        myBytes[0] = (byte)(lDec >> 24);
+        myBytes[1] = (byte)(lDec >> 16);
+        myBytes[2] = (byte)(lDec >> 8);
+        myBytes[3] = (byte)(lDec);
+        return myBytes;
+    }
+
+    public static byte[] long2ByteArray (long lDec){
+        try {
+            String strHex = Long.toHexString(lDec);
+            if (strHex.length() % 2 == 1)
+                strHex = "0" + strHex;
+            return HEX2Byte(strHex);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    /**
+     * integerToByteArray delivers 2 bytes in any case for an integer
+     * @param iDec value to convert
+     * @return byte array
+     */
+    public static byte[] integerToByteArray3(int iDec){
+        byte[] myBytes = new byte[3];
+
+        myBytes[0] = (byte)(iDec >> 16);
+        myBytes[1] = (byte)(iDec >> 8);
+        myBytes[2] = (byte)(iDec);
+        return myBytes;
+    }
+    public static byte[] integerToByteArray2(int iDec){
+        byte[] myBytes = new byte[2];
+
+        myBytes[0] = (byte)(iDec >> 8);
+        myBytes[1] = (byte)(iDec);
+        return myBytes;
+    }
+    public static byte[] integerToByteArray1(int iDec){
+        byte[] myBytes = new byte[1];
+
+        myBytes[0] = (byte)(iDec);
+        return myBytes;
+    }
+
+    public static byte[] integer2ByteArray(int iDec) {
     	try {
 			String strHex = Integer.toHexString(iDec);
 			if (strHex.length() % 2 == 1)

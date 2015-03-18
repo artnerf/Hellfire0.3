@@ -353,11 +353,32 @@ public class TLV {
 		
     	return null;
     }
-    
+
+    /**
+     * Method crateTag delivers a TLV coded value
+     * @param iTag
+     * @param baValue
+     * @return TLV coded value
+     */
+    public byte[] createTLV(int iTag, byte[] baValue){
+        byte[] baRet;
+        if (iTag > 0xFFFF)
+            baRet = Utils.integerToByteArray3(iTag);
+        else if (iTag > 0xFF)
+            baRet = Utils.integerToByteArray2(iTag);
+        else
+            baRet = Utils.integerToByteArray1(iTag);
+
+        baRet = Utils.AppendByteArray(baRet, makeLength(baValue.length));		// Length
+        baRet = Utils.AppendByteArray(baRet, baValue);							// Value
+        return baRet;
+    }
+
+
 	public byte[] createTag(int iTag, byte[] baValue) {
 		
 		try {
-			byte[] baRet = Utils.Integer2ByteArray(iTag);							// Tag
+			byte[] baRet = Utils.integer2ByteArray(iTag);							// Tag
 			baRet = Utils.AppendByteArray(baRet, makeLength(baValue.length));		// Length
 			baRet = Utils.AppendByteArray(baRet, baValue);							// Value
 			
@@ -368,10 +389,18 @@ public class TLV {
 	    }
 	}
 
+
+    /**
+     * Method appendTag
+     * @param baTLV
+     * @param iTag
+     * @param baValue
+     * @return TLV coded value appended on baTLV
+     */
 	public byte[] appendTag(byte[] baTLV, int iTag, byte[] baValue) {
 		
 		try {
-			baTLV = Utils.AppendByteArray(baTLV, Utils.Integer2ByteArray(iTag));	// Tag
+			baTLV = Utils.AppendByteArray(baTLV, Utils.integer2ByteArray(iTag));	// Tag
 			baTLV = Utils.AppendByteArray(baTLV, makeLength(baValue.length));		// Length
 			baTLV = Utils.AppendByteArray(baTLV, baValue);							// Value
 			
@@ -382,6 +411,20 @@ public class TLV {
 	    }
 	
 	}
+
+    public byte[] appendTLV(byte[] baTLV, int iTag, byte[] baValue){
+        if(iTag > 0xFFFF)
+            baTLV = Utils.AppendByteArray(baTLV, Utils.integerToByteArray3(iTag));	// Tag 3 bytes
+        else if(iTag > 0xFF)
+            baTLV = Utils.AppendByteArray(baTLV, Utils.integerToByteArray2(iTag));	// Tag 2 bytes
+        else
+            baTLV = Utils.AppendByteArray(baTLV, Utils.integerToByteArray1(iTag));  // Tag 1 byte
+
+        baTLV = Utils.AppendByteArray(baTLV, makeLength(baValue.length));		// Length
+        baTLV = Utils.AppendByteArray(baTLV, baValue);							// Value
+
+        return baTLV;
+    }
 
     private Tag getTag (byte[] tagList, int iPos, int iMaxPos) {
 

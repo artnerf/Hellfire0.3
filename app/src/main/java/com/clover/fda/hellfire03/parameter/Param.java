@@ -64,6 +64,7 @@ public class Param {
     public static final String SERVICE_PWD        = "service_pwd";
     public static final String MERCHANT_PWD       = "merchant_pwd";
     public static final String CASHIER_PWD        = "cashier_pwd";
+    public static final String SETUP_VERSION      = "setup_version";
     public static final String LOCAL_VERSION      = "local_version";
     public static final String LAST_ERROR         = "last_error";
     public static final String LAST_ERROR_TAG     = "last_error_tag";

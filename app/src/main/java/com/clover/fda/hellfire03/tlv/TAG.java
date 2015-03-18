@@ -11,10 +11,10 @@ public class TAG {
 
 
     public static final int E0_ROOT = 0xE0;
-/*
-#define TAG_E1_ROOT                0xE1
-#define TAG_E2_ROOT                0xE2
-#define TAG_E3_ROOT                0xE3
+    public static final int E1_ROOT = 0xE1;
+    public static final int E2_ROOT = 0xE2;
+    public static final int E3_ROOT = 0xE3;
+            /*
 #define TAG_E4_ROOT                0xE4
 #define TAG_E5_ROOT                0xE5
 #define TAG_E6_ROOT                0xE6
@@ -22,13 +22,11 @@ public class TAG {
 #define TAG_EF_ROOT                0xEF
 
  */
-    public static final int MENU_ITEM_ID = 0xDF01;
-    public static final int REQUEST_ID   = 0xDF02;
-    /*
-#define TAG_COMPANY_NO           0xDF03
-#define TAG_STORE_NO             0xDF04
-#define TAG_POS_NO               0xDF05
-*/
+    public static final int MENU_ITEM_ID  = 0xDF01;
+    public static final int REQUEST_ID    = 0xDF02;
+    public static final int COMPANY_NO    = 0xDF03;
+    public static final int STORE_NO      = 0xDF04;
+    public static final int POS_NO        = 0xDF05;
     public static final int PRINTER_READY = 0xDF06;
             /*
 #define TAG_OFFLINE              0xDF08
@@ -75,19 +73,22 @@ public class TAG {
     #define TAG_IP_ENTRY             0xDFAA
             #define TAG_YES                  0xDFAB
             #define TAG_PASSWORD             0xDFAE
-
-            #define TAG_PP_VENDOR          0xDF8008
-            #define TAG_PP_VERSION         0xDF8006
-            #define TAG_TIMER_VERSION      0xDF8009
-            #define TAG_PRINTER_WIDTH      0xDF8010
-            #define TAG_T_SNR              0xDF8007
-            #define TAG_SETUP_VERSION      0xDF8001
-            #define TAG_LAST_ERROR         0xDF8002
-            #define TAG_LAST_ERROR_TAG     0xDF8003
-            #define TAG_LAST_ERROR_TEXT    0xDF8004
-            #define TAG_ECR_VERSION        0xDF8005
-            #define TAG_CAPABILITIES       0xDF8011
-            #define TAG_LOCAL_VERSION      0xDF8012
+*/
+    public static final int PP_VENDOR     = 0xDF8008;
+    public static final int PP_VERSION    = 0xDF8006;
+    public static final int TIMER_VERSION = 0xDF8009;
+    public static final int PRINTER_WIDTH = 0xDF8010;
+    public static final int T_SNR         = 0xDF8007;
+    public static final int SETUP_VERSION = 0xDF8001;
+    /*
+    #define TAG_LAST_ERROR         0xDF8002
+    #define TAG_LAST_ERROR_TAG     0xDF8003
+    #define TAG_LAST_ERROR_TEXT    0xDF8004
+    */
+    public static final int ECR_VERSION   = 0xDF8005;
+    public static final int CAPABILITIES  = 0xDF8011;
+    public static final int LOCAL_VERSION = 0xDF8012;
+            /*
             #define TAG_SC_SETTINGS        0xDF8014
             #define TAG_TASK_DATA          0xDF8015
             #define TAG_IDLE_P_ON          0xDF8016
