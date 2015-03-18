@@ -30,7 +30,6 @@ public class Host {
 
 
     static protected byte[] eftRequest;
-    static protected byte[] eftResponse;
 
     static String companyNo;
     static String storeNo;
@@ -100,8 +99,8 @@ public class Host {
              String terminalId = bkse_ini.getString(Param.TERMINAL_ID,"");
              e1 = tlv.appendTLV(e1, TAG.TERMINAL_ID, Utils.stringToBytes(terminalId));
          }
-          int currency_exp = bkse_ini.getInt(Param.CURRENCY_EXP, 2);
-         e1 = tlv.appendTLV(e1, TAG.CURRENCY_EXP, Utils.integerToByteArray1(currency_exp));
+          String currency_exp = bkse_ini.getString(Param.CURRENCY_EXP, "0");
+         e1 = tlv.appendTLV(e1, TAG.CURRENCY_EXP, Utils.hexStringToBytes(currency_exp));
 
          eftRequest = tlv.appendTLV(eftRequest, TAG.E1_ROOT, e1);
 
@@ -111,12 +110,12 @@ public class Host {
          if(valid_triple == false) {
              String t_snr = bkse_ini.getString(Param.T_SNR, "");
              e3 = tlv.createTLV(TAG.T_SNR, Utils.stringToBytes(t_snr));
-             String pp_vendor = bkse_ini.getString("pp_vendor", "");
+             String pp_vendor = bkse_ini.getString(Param.PP_VENDOR, "");
              e3 = tlv.appendTLV(e3, TAG.PP_VENDOR, Utils.stringToBytes(pp_vendor));
          }
          else{
 
-             String pp_vendor = bkse_ini.getString("pp_vendor", "");
+             String pp_vendor = bkse_ini.getString(Param.PP_VENDOR, "");
              e3 = tlv.createTLV(TAG.PP_VENDOR, Utils.stringToBytes(pp_vendor));
          }
 
@@ -171,8 +170,8 @@ public class Host {
 //        os.write(sendString.toString().getBytes());
 
         //byte[] sendBytes = Utils.addHostMsgLen(Utils.hexStringToBytes(help));
-
-        os.write(eftRequest);
+        byte[] sendBytes = Utils.addHostMsgLen(eftRequest);
+        os.write(sendBytes);
         os.flush();
 
 //        is = sslsocket.getInputStream();
@@ -188,11 +187,14 @@ public class Host {
 //        isr.read(buffer, 0, 2000);
 
          byte[] buffer = new byte[2000];
-        is.read(buffer);
+        int bufferLen = is.read(buffer);
+
+
 
         socket.close();
 //        sslsocket.close();
-        eftResponse = buffer;
+        byte[] eftResponse = new byte[bufferLen];
+        System.arraycopy(buffer, 0, eftResponse, 0, bufferLen);
         return eftResponse;
     }
 

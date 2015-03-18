@@ -13,12 +13,12 @@ import java.io.IOException;
 
 public class HostActivity extends ActionBarActivity {
 
-    protected String hostResult;
+    private String hostResult;
+    private TextView say;
 
     private class HostCommTask extends AsyncTask<String, Void, String> {
 
         protected String returnString;
-        protected TextView say;
 
         protected String doInBackground(String ... str){
 
@@ -33,8 +33,8 @@ public class HostActivity extends ActionBarActivity {
         }
 
         protected void onPostExecute(String myStr){
-            hostResult = "Host Response: " + myStr ;
-            say.setText(hostResult);
+            hostResult = "\nHost Response: " + myStr ;
+            say.append(hostResult);
         }
     }
     @Override
@@ -42,7 +42,7 @@ public class HostActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_host);
 
-        TextView say = (TextView)findViewById(R.id.say_somethig);
+        say = (TextView)findViewById(R.id.say_somethig);
 
         Host.getTriple(getApplicationContext());
 
