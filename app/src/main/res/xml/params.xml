@@ -30,7 +30,7 @@
             android:key="printer_width"
             android:title="Druckerbreite" />
         <EditTextPreference
-            android:key="delay_print"
+            android:key="com.clover.fda.hellfire03.parameter.Param.PARAM_IND_DELAY_PRINT"
             android:summary="Enter your password"
             android:inputType="number"
             android:maxLength="1"
@@ -50,8 +50,8 @@
         android:title="PreferenceCategory B">
 
         <com.clover.fda.hellfire03.parameter.IPAddressPreference
-            android:key="edittext_preference"
-            android:title="IP address"
+            android:key="server_ip"
+            android:title="Primary Server IP"
             android:summary="summary_edittext_preference"
             android:inputType="number|numberDecimal"
             android:digits="0123456789."

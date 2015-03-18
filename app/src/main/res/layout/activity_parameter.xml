@@ -28,6 +28,12 @@
         android:layout_height="wrap_content"
         android:text="Create Bkse.par" />
 
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password Dialog" />
+
     <TextView
         android:id="@+id/txtPrefs"
         android:layout_width="wrap_content"

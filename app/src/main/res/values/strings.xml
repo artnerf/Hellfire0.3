@@ -11,4 +11,9 @@
 
     <string name="language_selection">Sprachwauswahl default</string>
     <string name="title_activity_host">HostActivity</string>
+
+    <string name="service_pwd">Service</string>
+    <string name="merchant_pwd">Merchant</string>
+    <string name="cashier_pwd">Cashier</string>
+
 </resources>
