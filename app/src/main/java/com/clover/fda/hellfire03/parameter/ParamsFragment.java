@@ -83,4 +83,6 @@ public class ParamsFragment extends PreferenceFragment implements SharedPreferen
         //getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
         super.onPause();
     }
-}
+
+
+   }

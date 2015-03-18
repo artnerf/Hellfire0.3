@@ -7,4 +7,5 @@ public class DefaultPassword {
     public static final String MERCHANT = "1234";
     public static final String CASHIER = "1234";
     public static final String SERVICE = "210888";
+
 }
