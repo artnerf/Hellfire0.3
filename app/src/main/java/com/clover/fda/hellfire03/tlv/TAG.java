@@ -14,9 +14,9 @@ public class TAG {
     public static final int E1_ROOT = 0xE1;
     public static final int E2_ROOT = 0xE2;
     public static final int E3_ROOT = 0xE3;
+    public static final int E4_ROOT = 0xE4;
+    public static final int E5_ROOT = 0xE5;
             /*
-#define TAG_E4_ROOT                0xE4
-#define TAG_E5_ROOT                0xE5
 #define TAG_E6_ROOT                0xE6
 #define TAG_E7_ROOT                0xE7
 #define TAG_EF_ROOT                0xEF
@@ -94,13 +94,15 @@ public class TAG {
             #define TAG_IDLE_P_ON          0xDF8016
             #define TAG_IDLE_P_OFF         0xDF8017
             #define TAG_ITEM_PROPERTY      0xDF8046
-
-
-            #define TAG_PP_PERIPHERAL      0xDF8203
+            */
+    public static final int PP_PERIPHERAL = 0xDF8203;
+            /*
             #define TAG_PP_REQUEST         0xDF8201
             #define TAG_PP_TIMEOUT         0xDF8020
             #define TAG_CODE_TABLE         0xDF8204
-            #define TAG_PP_RESPONSE        0xDF8202
+            */
+    public static final int PP_RESPONSE  = 0xDF8202;
+            /*
             #define TAG_REQUEST_TYPE       0xDF820E
             #define TAG_TRX_STATUS         0xDF8205
 

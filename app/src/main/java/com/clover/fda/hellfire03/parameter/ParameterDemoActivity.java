@@ -147,9 +147,12 @@ public class ParameterDemoActivity extends Activity implements PasswordDialogFra
         editor.putString(Param.TRACE_LEVEL, "1");
 
         // bkse.dat
-        editor.putString (Param.COMPANYNO, "00000666");
-        editor.putString (Param.STORENO, "00000001");
-        editor.putString (Param.POSNO, "54047754");
+//        editor.putString (Param.COMPANYNO, "00000666");
+//        editor.putString (Param.STORENO, "00000001");
+//        editor.putString (Param.POSNO, "54047754");
+        editor.putString (Param.COMPANYNO, "00000000");
+        editor.putString (Param.STORENO, "00000000");
+        editor.putString (Param.POSNO, "00000000");
         editor.putString (Param.CURRENCY, "0978");
         editor.putString(Param.CURRENCY_EXP, "2");
         editor.putString (Param.ECR_VERSION, "90000001");

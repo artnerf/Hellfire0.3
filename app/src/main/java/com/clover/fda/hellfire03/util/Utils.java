@@ -10,6 +10,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 public class Utils {
 
@@ -78,6 +81,11 @@ public class Utils {
         return baRet;
 	}
 
+    /*******************************************************
+     * addHostMsgLen
+     * @param baSend  data to send
+     * @return  data to send + len in the first 2 bytes
+     */
     public static byte[] addHostMsgLen(byte[] baSend) {
 
         int len = baSend.length +2;
@@ -338,7 +346,7 @@ public class Utils {
 		return sb.toString();
 	}
 
-    /**
+    /***********************************************************
      * longToByteArray delivers in any case 4 Bytes for a long
      * @param lDec value to convert
      * @return bytes array
@@ -364,7 +372,7 @@ public class Utils {
         }
     }
 
-    /**
+    /****************************************************************
      * integerToByteArray delivers 2 bytes in any case for an integer
      * @param iDec value to convert
      * @return byte array
@@ -400,6 +408,15 @@ public class Utils {
     	} catch (Exception e) {
     		return null;
     	}
+    }
+
+    public static long bytesToLong(byte[] arr){
+        int len = arr.length;
+        long result = 0;
+        for (int i = 0; i < len; i++){
+            result = (result << 8) + arr[i];
+        }
+        return result;
     }
 
     public static byte[] ConvertAmount(String strAmount) {
@@ -472,6 +489,44 @@ public class Utils {
     	return iInt;
     }
 
+    /**************************************************************************************
+     * getDataTime delivers a byte array of the current data and time (string to byte)
+     * @return byte array: year (4bytes) + month (2bytes) + day (2) + hour (2) + minute (2) + second (2)
+     */
+    public static byte[] getDateTime(){
+        GregorianCalendar calendar = new GregorianCalendar();
+        TimeZone tz = TimeZone.getTimeZone("Europe/Vienna");
+        calendar.setTimeZone(tz);
+
+        Integer year = calendar.get(Calendar.YEAR);
+        StringBuffer dateTime = new StringBuffer(year.toString());
+
+        int month = calendar.get(Calendar.MONTH);
+        month++;
+        if(month < 10) dateTime.append("0");
+        dateTime.append(month);
+
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        if(day < 10) dateTime.append("0");
+        dateTime.append(day);
+
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        if(hour < 10) dateTime.append("0");
+        dateTime.append(hour);
+
+        int minute = calendar.get(Calendar.MINUTE);
+        if(minute < 10) dateTime.append("0");
+        dateTime.append(minute);
+
+        int second = calendar.get(Calendar.SECOND);
+        if(second < 10) dateTime.append("0");
+        dateTime.append(second);
+        dateTime.append("\n");
+
+        byte[] dateTimeB = stringToBytes(dateTime.toString());
+
+        return dateTimeB;
+    }
 /*
     public static byte[] GetDate() {
 		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
